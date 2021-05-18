@@ -10,6 +10,11 @@ echo ERROR: no burp.jar found. Make sure it is in ./burp/pkg/burp.jar
 exit 0
 fi
 
+if [ ! -e ./burp/pkg/CollaboratorLogProxy.jar ]; then
+echo ERROR: no CollaboratorLogProxy.jar found. Make sure it is in ./burp/pkg/CollaboratorLogProxy.jar
+exit 0
+fi
+
 which docker > /dev/null 2>&1
 
 if [ $? -eq 1 ]; then
